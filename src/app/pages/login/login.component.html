@@ -1,38 +1,28 @@
 <div class="parent">
-    <div class="container">
-        <div class="row">
-          <!-- Left Blank Side -->
-          <div class="col-lg-6"></div>
-      
-          <!-- Right Side Form -->
-          <div class="col-lg-6 d-flex align-items-center justify-content-center right-side">
-            <div class="form-2-wrapper">
-              <div class="logo text-center">
-                <h2>Logo</h2>
-              </div>
-              <h2 class="text-center mb-4">Sign Into Your Account</h2>
-              <form action="#">
-                <div class="mb-3 form-box">
-                  <input type="email" class="form-control" id="email" [(ngModel)]="loginObj.username" name="username" placeholder="Enter Your Email" required>
+    <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
+        <div class="row w-100 justify-content-center">
+            <!-- Right Side Form -->
+            <div class="col-md-6 col-lg-4 d-flex align-items-center justify-content-center">
+                <div class="form-wrapper p-5 shadow-lg rounded">
+                    <div class="text-center mb-4">
+                        <h2 class="logo">LOGO</h2>
+                    </div>
+                    <h2 class="text-center mb-4">Sign In</h2>
+                    <form action="#">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" [(ngModel)]="loginObj.username" name="username" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="password" [(ngModel)]="loginObj.password" name="password" placeholder="Password" required>
+                        </div>
+                        <p class="text-muted small">Test Credentials: <strong>admin</strong> / <strong>112233</strong></p>
+                        <button type="button" (click)="onLogin()" class="btn btn-primary w-100 mb-3">Login</button>
+                        <div class="text-center">
+                            <p class="mb-0">Don't have an account? <a href="/register" class="text-primary">Register</a></p>
+                        </div>
+                    </form>
                 </div>
-                <div class="mb-3">
-                  <input type="password" class="form-control" id="password" [(ngModel)]="loginObj.password" name="password" placeholder="Enter Your Password" required>
-                </div>
-                <div class="mb-3">
-                   <p>Test Credentials: userName:  admin, password:  112233</p> 
-                </div>
-                <button type="button" (click)="onLogin()" class="btn btn-outline-secondary login-btn w-100 mb-3">Login</button>
-                <div class="social-login mb-3 type--A">
-                  
-                </div>
-              </form>
-      
-              <!-- Register Link -->
-              
             </div>
-          </div>
         </div>
-      </div>
+    </div>
 </div>
-
-  
