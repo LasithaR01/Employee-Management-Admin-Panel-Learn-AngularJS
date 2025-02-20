@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
@@ -8,41 +9,43 @@ import { ProjectEmployeeComponent } from './pages/project-employee/project-emplo
 import { ProjectFormComponent } from './pages/project-form/project-form.component';
 
 export const routes: Routes = [
-
     {
-        path:'',
+        path: '',
         redirectTo: 'login',
-        pathMatch:'full'
+        pathMatch: 'full'
     },
     {
-        path:'login',
-        component:LoginComponent
+        path: 'login',
+        component: LoginComponent
     },
     {
-        path:'',
-        component:LayoutComponent,
-        children:[
+        path: 'register',
+        component: RegisterComponent
+    },
+    {
+        path: '',
+        component: LayoutComponent,
+        children: [
             {
-                path:'dashboard',
-                component:DashboardComponent
+                path: 'dashboard',
+                component: DashboardComponent
             },
             {
-                path:'employee',
-                component:EmployeeComponent
+                path: 'employee',
+                component: EmployeeComponent
             },
             {
-                path:'projects',
-                component:ProjectComponent
+                path: 'projects',
+                component: ProjectComponent
             },
             {
-                path:'new-project/:id',
-                component:ProjectFormComponent
+                path: 'new-project/:id',
+                component: ProjectFormComponent
             },
             {
-                path:'project-employee',
-                component:ProjectEmployeeComponent
+                path: 'project-employee',
+                component: ProjectEmployeeComponent
             }
         ]
     }
-
 ];
