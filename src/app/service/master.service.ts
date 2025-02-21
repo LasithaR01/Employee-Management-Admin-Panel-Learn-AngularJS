@@ -20,7 +20,7 @@ export class MasterService {
   getChildDeptById(deptid: number): Observable<IApiResponse> {
     return this.http.get<IApiResponse>(`${this.apiUrl}GetChildDepartmentByParentId?deptId=${deptid}`);
   }
- 
+
   saveEmp(obj: Employee): Observable<IApiResponse> {
     debugger;
     return this.http.post<IApiResponse>(this.apiUrl + "CreateEmployee", obj);
@@ -59,11 +59,11 @@ export class MasterService {
   getProjectEmp(): Observable<IProjectEmployee[]> {
     return this.http.get<IProjectEmployee[]>(this.apiUrl + "GetAllProjectEmployees");
   }
- 
+
   saveProjectEmp(obj: IProjectEmployee): Observable<IProject> {
     debugger;
     return this.http.post<IProject>(this.apiUrl + "CreateProjectEmployee", obj);
-  } 
+  }
   updateProjectEmp(obj: IProjectEmployee): Observable<IProjectEmployee> {
     debugger;
     return this.http.put<IProjectEmployee>(this.apiUrl + "UpdateProjectEmployee/"+obj.empProjectId, obj);
@@ -73,5 +73,5 @@ export class MasterService {
     return this.http.get<any>(this.apiUrl + "GetDashboard");
   }
 
- 
+
 }
