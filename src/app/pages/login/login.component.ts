@@ -19,7 +19,7 @@ export class LoginComponent {
   router = inject(Router);
 
   onLogin() {
-    if(this.loginObj.username == "admin" && this.loginObj.password =="112233") {
+    if(this.loginObj.username == "emilys" && this.loginObj.password =="emilyspass") {
       this.router.navigateByUrl('dashboard')
     } else {
       alert("Wrong Credentials")
