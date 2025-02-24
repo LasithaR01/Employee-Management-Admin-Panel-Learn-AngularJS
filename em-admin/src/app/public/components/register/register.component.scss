@@ -78,13 +78,10 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 8px;
-  color: #1976d2; /* Blue text color */
-  border: 1px solid #1976d2; /* Blue border */
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .login-link-button:hover {
-  background-color: #e3f2fd; /* Light blue background on hover */
-  transform: scale(1.02); /* Slight scaling effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
