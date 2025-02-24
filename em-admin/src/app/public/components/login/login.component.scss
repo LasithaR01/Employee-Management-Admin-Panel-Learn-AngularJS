@@ -1,34 +1,87 @@
 :host {
   display: flex;
   justify-content: center;
-  margin: 100px 0px;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  margin: 0;
 }
 
-mat-card {
-  max-width: 600px;
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+}
 
-  mat-card-title,
-  mat-card-content {
-    display: flex;
-    justify-content: center;
+.login-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+}
 
-    form {
-      .mat-form-field {
-        width: 100%;
-        min-width: 300px;
-      }
+.login-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-      .error {
-        padding: 16px;
-        width: 300px;
-        color: white;
-        background-color: red;
-      }
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-      .button {
-        display: flex;
-        justify-content: flex-end;
-      }
-    }
-  }
+.input-field {
+  width: 100%;
+}
+
+.input-field .mat-form-field-wrapper {
+  border-radius: 8px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  background-color: #1976d2; /* Default blue color */
+  color: white; /* White text for contrast */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border: none; /* Remove default border */
+}
+
+.login-button:hover {
+  background-color: #1565c0; /* Darker blue on hover */
+  transform: scale(1.02); /* Slight scaling effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.register-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
